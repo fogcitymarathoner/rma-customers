@@ -1,0 +1,18 @@
+<div class="col-md-1" id="rma-date-${id}">
+    <a href="${url}">${date}</a>
+</div>
+<div class="col-md-1" id="rma-case_number-${id}">
+    <a href="${url}">${case_number}</a>
+</div>
+<div class="col-md-2" id="rma-company_name-${id}">
+    <a href="${url}">${customer_name}</a>
+</div>
+<div class="col-md-3" id="rma-site-${id}">
+    <a href="${url}">${site_name}</a>
+    <?py if len(share_point_url) > 0: ?>
+        <a href="${share_point_url_html}">SharePoint</a>
+    <?py #endif ?>
+</div>
+<div class="col-md-5" id="rma-issue-${id}">
+    <a href="${url}">${issue}</a>
+</div>

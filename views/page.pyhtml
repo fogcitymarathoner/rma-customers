@@ -1,0 +1,23 @@
+<table>
+    <?py i = 0 ?>
+    <?py for k in keys: ?>
+        <?py date = k['date'] ?>
+        <?py customer_name = k['customer_name'] ?>
+        <?py site_name = k['site_name'] ?>
+        <?py id = k['id'] ?>
+        <?py url = k['url'] ?>
+        <?py share_point_url = k['share_point_url'] ?>
+        <?py issue = k['issue'] ?>
+        <?py case_number = k['case_number'] ?>
+        <?py share_point_url_html = "JavaScript:newPopup('"+"https://enlighted.sharepoint.com/support/_layouts/15/FormServer.aspx?XmlLocation=/support/RMA/"+share_point_url+"&ClientInstalled=true&DefaultItemOpen=1&Source=https%3A%2F%2Fenlighted%2Esharepoint%2Ecom%2Fsupport%2FRMA%2FForms%2FView1%2Easpx"+"');" ?>
+            <?py if i % 2 == 0: ?>
+                <div  class="row odd-row">
+                <?py include('_row.pyhtml', id=id, date=date, url=url, share_point_url_html=share_point_url_html, customer_name=customer_name, site_name=site_name, share_point_url=share_point_url, issue=issue, case_number=case_number) ?>
+            <?py else: ?>
+                <div  class="row even-row">
+                <?py include('_row.pyhtml', id=id, date=date, url=url, share_point_url_html=share_point_url_html, customer_name=customer_name, site_name=site_name, share_point_url=share_point_url, issue=issue, case_number=case_number) ?>
+            <?py #endif ?>
+            <?py i += 1 ?>
+            </div>
+    <?py #endfor ?>
+</table>

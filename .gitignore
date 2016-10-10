@@ -1,0 +1,6 @@
+log.txt
+reload
+*.pyc
+*.pyhtml.cache
+settings*
+local_settings*
